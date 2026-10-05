@@ -1,0 +1,216 @@
+
+/* GUIDE SECTION */
+
+.guide-section {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 5% 0;
+  box-sizing: border-box;
+}
+
+/* LEFT AND RIGHT CONTENT */
+
+.guide-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 35px;
+}
+
+/* LEFT SIDE */
+
+.guide-left {
+  width: 50%;
+}
+
+.guide-camp-icon {
+  width: 50px;
+  height: 50px;
+  display: block;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+/* SMALL TITLE */
+
+.guide-small-title {
+  color: #30af5b;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 12px;
+}
+
+/* MAIN HEADING */
+
+.guide-left h2 {
+  font-size: 48px;
+  line-height: 1.15;
+  font-weight: 700;
+  color: #111;
+  margin: 0;
+}
+
+/* RIGHT SIDE */
+
+.guide-right {
+  width: 40%;
+}
+
+.guide-description {
+  color: #777;
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* BOAT IMAGE */
+
+.guide-boat {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;
+}
+
+.guide-boat > img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* INFO BOX */
+
+.guide-info-box {
+  position: absolute;
+  top: 12%;
+  left: 5%;
+  width: 190px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.guide-meter {
+  display: flex;
+  align-items: center;
+}
+
+.guide-info-content {
+  width: 100%;
+}
+
+.guide-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.guide-info-row p,
+.guide-info-row span {
+  font-size: 10px;
+  margin: 0;
+}
+
+.guide-info-row span {
+  color: #30af5b;
+  font-weight: 600;
+}
+
+.guide-info-content h3 {
+  font-size: 13px;
+  margin: 8px 0 12px;
+}
+
+.guide-start {
+  font-size: 10px;
+  color: #999;
+  margin: 0 0 5px;
+}
+
+.guide-info-content h4 {
+  font-size: 11px;
+  margin: 0;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .guide-content {
+    gap: 25px;
+    margin-bottom: 25px;
+  }
+
+  .guide-left h2 {
+    font-size: 38px;
+  }
+
+  .guide-description {
+    font-size: 14px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .guide-section {
+    padding: 0 20px;
+  }
+
+  .guide-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .guide-left,
+  .guide-right {
+    width: 100%;
+  }
+
+  .guide-left h2 {
+    font-size: 34px;
+  }
+
+  .guide-description {
+    font-size: 14px;
+  }
+
+  .guide-boat {
+    border-radius: 20px;
+  }
+
+  .guide-info-box {
+    top: 8%;
+    left: 4%;
+    width: 150px;
+    padding: 10px;
+    gap: 8px;
+  }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 400px) {
+  .guide-section {
+    padding: 0 15px;
+  }
+
+  .guide-left h2 {
+    font-size: 30px;
+  }
+
+  .guide-info-box {
+    width: 135px;
+    padding: 8px;
+  }
+}

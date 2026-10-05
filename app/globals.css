@@ -1,35 +1,103 @@
- @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-@import "tailwindcss";
+ @tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme {
-  --color-green-50: #30AF5B;
-  --color-green-90: #292C27;
-  --color-gray-10: #EEEEEE;
-  --color-gray-20: #A2A2A2;
-  --color-gray-30: #7B7B7B;
-  --color-gray-50: #585858;
-  --color-gray-90: #141414;
-  --breakpoint-3xl: 1680px;
-  --background-image-feature-bg: url('/feature-bg.png');
-  --background-image-pattern: url('/pattern.png');
-  --background-image-pattern-2: url('/pattern-bg.png');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-* { margin:0; padding:0; box-sizing:border-box; }
-body { font-family: Inter, sans-serif; }
+body {
+  font-family: Inter, sans-serif;
+  background-color: white;
+}
 
-@utility btn_white { @apply border-white bg-white px-8 py-3 text-green-50 }
-@utility btn_green { @apply border-green-50 bg-green-50 px-8 py-5 text-white }
-@utility btn_dark_green { @apply bg-green-90 px-8 py-4 text-white }
-@utility max-container { @apply mx-auto max-w-[1440px]; }
-@utility padding-container { @apply px-6 lg:px-20; }
-@utility flexCenter { @apply flex items-center justify-center; }
-@utility flexBetween { @apply flex items-center justify-between; }
-@utility bold-64 { @apply text-[64px] font-[700] leading-[120%]; }
-@utility bold-40 { @apply text-[40px] font-[700] leading-[120%]; }
-@utility bold-32 { @apply text-[32px] font-[700] leading-[120%]; }
-@utility bold-20 { @apply text-[20px] font-[700]; }
-@utility regular-16 { @apply text-[16px] font-[400]; }
-@utility feature-phone { @apply absolute top-[13%] z-10 hidden max-w-[1500px] rotate-[15deg] md:-left-16 lg:flex 3xl:left-20; }
-@utility get-app { @apply mx-auto max-w-[1440px] relative flex w-full flex-col justify-between gap-32 overflow-hidden bg-green-90 bg-pattern bg-cover bg-center bg-no-repeat px-6 py-12 text-white sm:flex-row sm:gap-12 sm:py-24 lg:px-20 xl:max-h-[598px] 2xl:rounded-[40px]; }
-@utility hero-map { @apply absolute right-0 top-0 h-screen w-screen bg-pattern-2 bg-cover bg-center md:-right-28 xl:-top-60; }
+/* ===== BUTTONS & LAYOUT (No @apply) ===== */
+.max-container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.padding-container {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+@media (min-width: 1024px) {
+  .padding-container {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+.flexCenter { display: flex; align-items: center; justify-content: center; }
+.flexBetween { display: flex; align-items: center; justify-content: space-between; }
+.flexStart { display: flex; align-items: center; justify-content: flex-start; }
+.flexEnd { display: flex; align-items: center; justify-content: flex-end; }
+
+.btn_green {
+  background-color: #30AF5B;
+  color: white;
+  padding: 16px 32px;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid #30AF5B;
+}
+.btn_white {
+  background-color: white;
+  color: #30AF5B;
+  padding: 12px 32px;
+  border-radius: 9999px;
+  border: 1px solid white;
+}
+.btn_white_text {
+  background-color: white;
+  color: #1a1a1a;
+  padding: 12px 32px;
+  border-radius: 9999px;
+  border: 1px solid #E9E9E9;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.btn_dark_green {
+  background-color: #292C27;
+  color: white;
+  padding: 16px 32px;
+  border-radius: 9999px;
+}
+
+/* ===== FONTS ===== */
+.bold-88 { font-size: 88px; font-weight: 700; line-height: 120%; }
+.bold-52 { font-size: 52px; font-weight: 700; line-height: 120%; }
+.bold-40 { font-size: 40px; font-weight: 700; }
+.bold-32 { font-size: 32px; font-weight: 700; }
+.bold-20 { font-size: 20px; font-weight: 700; }
+.bold-16 { font-size: 16px; font-weight: 700; }
+.regular-16 { font-size: 16px; font-weight: 400; }
+.regular-20 { font-size: 20px; font-weight: 400; }
+
+/* ===== HERO MAP - No Error ===== */
+.hero-map {
+  position: absolute;
+  top: 0px;
+  right: 0;
+  height: 800px;
+  width: 800px;
+  background-image: url('/pattern.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top right;
+  z-index: 1;
+  pointer-events: none;
+}
+.bg-green-90 { background-color: #292C27; }
+.text-green-90 { color: #292C27; }
+.text-gray-30 { color: #7B7B7B; }
+.text-gray-20 { color: #A2A2A2; }
+.text-white { color: white; }
+.text-blue-70 { color: #021639; }
+.bg-pattern-2 { background-image: url('/pattern.png'); }
+
+.hide-scrollbar::-webkit-scrollbar { display: none; }
