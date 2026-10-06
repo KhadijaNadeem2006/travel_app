@@ -1,14 +1,19 @@
- .camp-section {
+
+/* =========================
+   CAMP SECTION
+========================= */
+
+.camp-section {
   width: 100%;
   max-width: 1440px;
-  margin:  -150px auto 0;
+  margin: -170px auto 0;
   padding: 0 5% 5px;
   box-sizing: border-box;
   overflow: hidden;
 }
 
 /* =========================
-   IMAGES SLIDER
+   IMAGE SLIDER
 ========================= */
 
 .camp-slider {
@@ -109,7 +114,9 @@
   font-weight: 600;
 }
 
-/* AVATARS */
+/* =========================
+   AVATARS
+========================= */
 
 .camp-avatars {
   display: flex;
@@ -154,7 +161,9 @@
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
-/* HEADING */
+/* =========================
+   INFORMATION HEADING
+========================= */
 
 .camp-info-heading {
   display: flex;
@@ -170,7 +179,9 @@
   font-weight: 600;
 }
 
-/* TEXT */
+/* =========================
+   INFORMATION TEXT
+========================= */
 
 .camp-info p {
   margin: 18px 0;
@@ -180,7 +191,9 @@
   line-height: 1.7;
 }
 
-/* HIDE BOTTOM LINE / ARROW */
+/* =========================
+   HIDE BOTTOM LINE / ARROW
+========================= */
 
 .camp-info-bottom {
   display: none;
@@ -191,14 +204,24 @@
 ========================= */
 
 @media (max-width: 900px) {
+
   .camp-card {
     flex-basis: 88%;
     height: 360px;
   }
 
   .camp-info {
-    width: 340px;
-    margin-top: -65px;
+    width: 320px;
+    margin-top: -60px;
+    padding: 20px;
+  }
+
+  .camp-info-heading h2 {
+    font-size: 21px;
+  }
+
+  .camp-info p {
+    font-size: 13px;
   }
 }
 
@@ -207,57 +230,79 @@
 ========================= */
 
 @media (max-width: 768px) {
+
   .camp-section {
-    margin-top: -10px;
-    padding: 5px 4% 5px;
+    margin-top: -75px;
+    padding: 5px 15px 5px;
   }
 
   .camp-slider {
     gap: 14px;
+    padding-bottom: 5px;
   }
 
   .camp-card {
     flex: 0 0 92%;
-    height: 300px;
+    height: 280px;
     border-radius: 20px;
   }
 
-  .camp-location {
-    top: 16px;
-    left: 16px;
-    font-size: 13px;
-    gap: 7px;
+  /* IMAGE */
+
+  .camp-image {
+    object-position: center;
   }
 
+  /* LOCATION */
+
+  .camp-location {
+    top: 14px;
+    left: 14px;
+    font-size: 12px;
+    gap: 6px;
+  }
+
+  /* PEOPLE */
+
   .camp-people {
-    left: 16px;
-    bottom: 16px;
-    font-size: 13px;
+    left: 14px;
+    bottom: 14px;
+    font-size: 12px;
+    gap: 8px;
   }
 
   .camp-avatars img {
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
   }
 
+  /* GREEN BOX */
+
   .camp-info {
-    width: 92%;
-    max-width: none;
+    width: 82%;
+    max-width: 320px;
 
-    margin: -45px 4% 0 auto;
+    margin: -35px 4% 0 auto;
 
-    padding: 20px;
+    padding: 16px 17px;
 
-    border-radius: 18px;
+    border-radius: 16px;
+  }
+
+  .camp-info-heading {
+    gap: 8px;
   }
 
   .camp-info-heading h2 {
-    font-size: 19px;
+    font-size: 17px;
+    line-height: 1.25;
   }
 
   .camp-info p {
-    font-size: 13px;
-    line-height: 1.6;
+    margin: 10px 0 0;
+
+    font-size: 11px;
+    line-height: 1.5;
   }
 }
 
@@ -265,16 +310,60 @@
    SMALL MOBILE
 ========================= */
 
-@media (max-width: 380px) {
+@media (max-width: 400px) {
+
   .camp-section {
-    margin-top: -5px;
+    margin-top: -65px;
+    padding: 5px 10px;
+  }
+
+  .camp-slider {
+    gap: 10px;
   }
 
   .camp-card {
-    height: 270px;
+    flex: 0 0 94%;
+    height: 255px;
+    border-radius: 18px;
+  }
+
+  .camp-location {
+    top: 12px;
+    left: 12px;
+    font-size: 11px;
+  }
+
+  .camp-people {
+    left: 12px;
+    bottom: 12px;
+    font-size: 11px;
+  }
+
+  .camp-avatars img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .camp-info {
+    width: 84%;
+    max-width: 280px;
+
+    margin: -30px 3% 0 auto;
+
+    padding: 14px;
+
+    border-radius: 15px;
   }
 
   .camp-info-heading h2 {
-    font-size: 17px;
+    font-size: 15px;
+    line-height: 1.25;
+  }
+
+  .camp-info p {
+    margin-top: 8px;
+    font-size: 10px;
+    line-height: 1.45;
   }
 }
+

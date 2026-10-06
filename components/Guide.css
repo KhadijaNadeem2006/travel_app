@@ -1,15 +1,18 @@
-
-/* GUIDE SECTION */
+ /* =========================
+   GUIDE SECTION
+========================= */
 
 .guide-section {
   width: 100%;
   max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 5% 0;
+  margin: 30px auto 0;
+  padding: 0 5%;
   box-sizing: border-box;
 }
 
-/* LEFT AND RIGHT CONTENT */
+/* =========================
+   LEFT + RIGHT CONTENT
+========================= */
 
 .guide-content {
   width: 100%;
@@ -17,13 +20,16 @@
   align-items: center;
   justify-content: space-between;
   gap: 40px;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
 }
 
-/* LEFT SIDE */
+/* =========================
+   LEFT SIDE
+========================= */
 
 .guide-left {
   width: 50%;
+  min-width: 0;
 }
 
 .guide-camp-icon {
@@ -34,8 +40,6 @@
   margin-bottom: 12px;
 }
 
-/* SMALL TITLE */
-
 .guide-small-title {
   color: #30af5b;
   font-size: 14px;
@@ -43,20 +47,21 @@
   margin: 0 0 12px;
 }
 
-/* MAIN HEADING */
-
 .guide-left h2 {
-  font-size: 48px;
+  font-size: clamp(38px, 4vw, 52px);
   line-height: 1.15;
   font-weight: 700;
   color: #111;
   margin: 0;
 }
 
-/* RIGHT SIDE */
+/* =========================
+   RIGHT SIDE
+========================= */
 
 .guide-right {
   width: 40%;
+  min-width: 0;
 }
 
 .guide-description {
@@ -66,7 +71,9 @@
   margin: 0;
 }
 
-/* BOAT IMAGE */
+/* =========================
+   BOAT IMAGE
+========================= */
 
 .guide-boat {
   width: 100%;
@@ -82,19 +89,21 @@
   object-fit: cover;
 }
 
-/* INFO BOX */
+/* =========================
+   INFO BOX
+========================= */
 
 .guide-info-box {
   position: absolute;
   top: 12%;
   left: 5%;
-  width: 190px;
+  width: 175px;
   background: #fff;
   border-radius: 15px;
-  padding: 15px;
+  padding: 13px;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
 }
 
@@ -111,12 +120,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
 }
 
 .guide-info-row p,
 .guide-info-row span {
-  font-size: 10px;
+  font-size: 9px;
   margin: 0;
 }
 
@@ -126,27 +135,38 @@
 }
 
 .guide-info-content h3 {
-  font-size: 13px;
-  margin: 8px 0 12px;
+  font-size: 12px;
+  margin: 7px 0 10px;
 }
 
 .guide-start {
-  font-size: 10px;
+  font-size: 9px;
   color: #999;
-  margin: 0 0 5px;
+  margin: 0 0 4px;
 }
 
 .guide-info-content h4 {
-  font-size: 11px;
+  font-size: 10px;
   margin: 0;
 }
 
-/* TABLET */
+/* =========================
+   TABLET
+========================= */
 
 @media (max-width: 900px) {
+
   .guide-content {
     gap: 25px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+  }
+
+  .guide-left {
+    width: 52%;
+  }
+
+  .guide-right {
+    width: 42%;
   }
 
   .guide-left h2 {
@@ -156,61 +176,174 @@
   .guide-description {
     font-size: 14px;
   }
-}
-
-/* MOBILE */
-
-@media (max-width: 768px) {
-  .guide-section {
-    padding: 0 20px;
-  }
-
-  .guide-content {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-    margin-bottom: 20px;
-  }
-
-  .guide-left,
-  .guide-right {
-    width: 100%;
-  }
-
-  .guide-left h2 {
-    font-size: 34px;
-  }
-
-  .guide-description {
-    font-size: 14px;
-  }
-
-  .guide-boat {
-    border-radius: 20px;
-  }
 
   .guide-info-box {
-    top: 8%;
-    left: 4%;
-    width: 150px;
+    width: 155px;
     padding: 10px;
     gap: 8px;
   }
 }
 
-/* SMALL MOBILE */
+/* =========================
+   MOBILE
+========================= */
 
-@media (max-width: 400px) {
+@media (max-width: 768px) {
+
   .guide-section {
     padding: 0 15px;
+    margin-top: 25px;
+  }
+
+  .guide-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 18px;
+  }
+
+  /* LEFT */
+
+  .guide-left {
+    width: 48%;
+  }
+
+  .guide-camp-icon {
+    width: 38px;
+    height: 38px;
+    margin-bottom: 7px;
+  }
+
+  .guide-small-title {
+    font-size: 11px;
+    margin-bottom: 7px;
   }
 
   .guide-left h2 {
-    font-size: 30px;
+    font-size: 28px;
+    line-height: 1.08;
+  }
+
+  /* RIGHT */
+
+  .guide-right {
+    width: 48%;
+    padding-top: 48px;
+  }
+
+  .guide-description {
+    font-size: 11px;
+    line-height: 1.55;
+  }
+
+  /* BOAT */
+
+  .guide-boat {
+    width: 100%;
+    border-radius: 18px;
+  }
+
+  .guide-boat > img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+  }
+
+  /* SMALL WHITE BOX */
+
+  .guide-info-box {
+    top: 10%;
+    left: 4%;
+    width: 85px;
+    padding: 5px;
+    gap: 4px;
+    border-radius: 8px;
+  }
+
+  /* METER */
+
+  .guide-meter img {
+    width: 10px !important;
+    height: 95px !important;
+  }
+
+  .guide-info-row p,
+  .guide-info-row span {
+    font-size: 6px;
+  }
+
+  .guide-info-content h3 {
+    font-size: 9px;
+    margin: 4px 0 6px;
+  }
+
+  .guide-start {
+    font-size: 6px;
+    margin-bottom: 3px;
+  }
+
+  .guide-info-content h4 {
+    font-size: 7px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+  .guide-section {
+    padding: 0 10px;
+    margin-top: 20px;
+  }
+
+  .guide-content {
+    gap: 12px;
+  }
+
+  .guide-left {
+    width: 48%;
+  }
+
+  .guide-right {
+    width: 48%;
+    padding-top: 45px;
+  }
+
+  .guide-camp-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .guide-small-title {
+    font-size: 9px;
+  }
+
+  .guide-left h2 {
+    font-size: 25px;
+  }
+
+  .guide-description {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+
+  .guide-boat > img {
+    height: 220px;
   }
 
   .guide-info-box {
-    width: 135px;
-    padding: 8px;
+    width: 78px;
+    padding: 5px;
+  }
+
+  /* SMALL METER */
+
+  .guide-meter img {
+    width: 9px !important;
+    height: 85px !important;
   }
 }

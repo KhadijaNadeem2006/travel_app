@@ -1,99 +1,161 @@
- 
-/* MAIN SECTION */
+ /* =========================
+   MAIN SECTION
+========================= */
 
 .getapp-section {
   width: 100%;
   max-width: 1440px;
+
   margin: 50px auto 0;
+
   padding: 0 5%;
+
   box-sizing: border-box;
 }
 
-/* MAIN DARK BOX */
+
+/* =========================
+   MAIN DARK BOX
+========================= */
 
 .getapp-box {
   width: 100%;
   min-height: 430px;
+
   position: relative;
   overflow: hidden;
+
   border-radius: 32px;
+
   background: #202923;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   padding: 70px;
+
   box-sizing: border-box;
 }
 
-/* BACKGROUND PATTERN */
+
+/* =========================
+   BACKGROUND PATTERN
+========================= */
 
 .getapp-pattern {
   position: absolute;
+
   inset: -100px;
+
   opacity: 0.35;
+
   pointer-events: none;
+
   background:
     repeating-radial-gradient(
       ellipse at center,
       transparent 0 38px,
       rgba(255, 255, 255, 0.08) 39px 41px
     );
+
   transform: rotate(-12deg) scale(1.2);
 }
 
-/* LEFT CONTENT */
+
+/* =========================
+   LEFT CONTENT
+========================= */
 
 .getapp-content {
   position: relative;
-  z-index: 2;
+
+  z-index: 5;
+
   width: 50%;
+
   max-width: 500px;
 }
 
-/* HEADING */
+
+/* =========================
+   HEADING
+========================= */
 
 .getapp-content h2 {
   margin: 0;
+
   color: white;
+
   font-size: 54px;
+
   line-height: 1.05;
+
   font-weight: 700;
 }
 
-/* DESCRIPTION */
+
+/* =========================
+   DESCRIPTION
+========================= */
 
 .getapp-content p {
   margin: 25px 0 28px;
+
   color: #d3d9d4;
+
   font-size: 14px;
+
   line-height: 1.6;
 }
 
-/* BUTTONS */
+
+/* =========================
+   BUTTONS
+========================= */
 
 .getapp-buttons {
   display: flex;
+
   gap: 14px;
+
   flex-wrap: wrap;
 }
 
-/* DOWNLOAD BUTTON */
+
+/* =========================
+   DOWNLOAD BUTTON
+========================= */
 
 .download-btn {
   min-width: 145px;
+
   height: 48px;
+
   border: 1px solid rgba(255, 255, 255, 0.25);
+
   border-radius: 999px;
+
   background: white;
+
   color: #2f6b3f;
+
   padding: 0 20px;
+
   display: flex;
+
   align-items: center;
+
   justify-content: center;
+
   gap: 9px;
+
   font-size: 12px;
+
   font-weight: 700;
+
   cursor: pointer;
+
   transition: 0.3s ease;
 }
 
@@ -101,56 +163,92 @@
   transform: translateY(-3px);
 }
 
-/* SECOND BUTTON */
+
+/* =========================
+   SECOND BUTTON
+========================= */
 
 .dark-btn {
   background: transparent;
+
   color: white;
+
   border: 1px solid rgba(255, 255, 255, 0.35);
 }
 
-/* PHONE AREA */
+
+/* =========================
+   PHONE AREA
+========================= */
 
 .getapp-phones {
   position: absolute;
+
   z-index: 3;
+
   right: 50px;
+
   top: -20px;
+
   width: 48%;
+
   height: 520px;
 }
 
-/* BOTH PHONES */
+
+/* =========================
+   BOTH PHONES
+========================= */
 
 .getapp-phone {
   position: absolute;
+
   height: auto;
+
   object-fit: contain;
+
   transform: none;
 }
 
-/* BACK PHONE */
+
+/* =========================
+   BACK PHONE
+========================= */
 
 .back-phone {
   width: 285px;
+
   right: 125px;
+
   top: 105px;
+
   z-index: 1;
+
   opacity: 0.9;
 }
 
-/* FRONT PHONE */
+
+/* =========================
+   FRONT PHONE
+========================= */
 
 .front-phone {
   width: 325px;
+
   right: -5px;
+
   top: 20px;
+
   z-index: 2;
 }
 
-/* TABLET */
+
+/* =========================
+   TABLET
+========================= */
 
 @media (max-width: 1000px) {
+
   .getapp-box {
     padding: 60px 45px;
   }
@@ -165,122 +263,360 @@
 
   .back-phone {
     right: 100px;
+
     top: 100px;
   }
 
   .front-phone {
     right: -15px;
+
     top: 20px;
   }
 }
 
-/* MOBILE */
+
+/* =================================================
+   MOBILE
+   ONLY MOBILE IS CHANGED BELOW
+================================================= */
 
 @media (max-width: 768px) {
+
+  /* =========================
+     SECTION
+  ========================= */
+
   .getapp-section {
-    margin:  auto 0;
+    width: 100%;
+
+    margin: 55px auto 0;
+
     padding: 0 15px;
+
+    box-sizing: border-box;
   }
+
+
+  /* =========================
+     DARK BOX
+  ========================= */
 
   .getapp-box {
-    min-height: 700px;
-    padding: 45px 25px 0;
-    flex-direction: column;
-    align-items: flex-start;
+    width: 100%;
+
+    min-height: 330px;
+
+    padding: 32px 18px;
+
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 28px;
+
     border-radius: 26px;
+
+    box-sizing: border-box;
   }
+
+
+  /* =========================
+     LEFT CONTENT
+  ========================= */
 
   .getapp-content {
-    width: 100%;
+    width: 49%;
+
+    max-width: none;
+
+    position: relative;
+
+    z-index: 5;
+
+    flex-shrink: 0;
   }
+
+
+  /* =========================
+     HEADING
+  ========================= */
 
   .getapp-content h2 {
-    font-size: 38px;
+    margin: 0;
+
+    font-size: 29px;
+
+    line-height: 1.05;
+
+    white-space: normal;
   }
+
+
+  /* =========================
+     DESCRIPTION
+  ========================= */
 
   .getapp-content p {
-    font-size: 13px;
+    margin: 13px 0 17px;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+
+    max-width: 160px;
   }
+
+
+  /* =========================
+     BUTTONS
+  ========================= */
 
   .getapp-buttons {
-    gap: 10px;
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 8px;
+
+    position: relative;
+
+    z-index: 10;
   }
+
 
   .download-btn {
-    min-width: 135px;
+    min-width: 112px;
+
+    width: 112px;
+
+    height: 39px;
+
+    padding: 0 10px;
+
+    font-size: 9px;
+
+    gap: 6px;
+
+    position: relative;
+
+    z-index: 10;
   }
 
-  /* PHONE AREA */
+
+  .download-btn svg {
+    width: 13px;
+
+    height: 13px;
+  }
+
+
+  /* =========================
+     RIGHT PHONE AREA
+  ========================= */
 
   .getapp-phones {
     position: absolute;
-    width: 100%;
-    height: 380px;
+
+    z-index: 3;
+
+    width: 42%;
+
+    height: 100%;
+
     right: 0;
-    top: auto;
-    bottom: -45px;
+
+    top: 0;
+
+    pointer-events: none;
   }
 
-  /* BACK PHONE */
+
+  /* =========================
+     BACK PHONE
+  ========================= */
 
   .back-phone {
-    width: 205px;
-    right: 38%;
-    top: 80px;
+    width: 132px;
+
+    right: 22px;
+
+    top: 62px;
+
+    z-index: 1;
+
+    opacity: 0.9;
+
     transform: none;
   }
 
-  /* FRONT PHONE */
+
+  /* =========================
+     FRONT PHONE
+  ========================= */
 
   .front-phone {
-    width: 235px;
-    right: 2%;
-    top: 25px;
+    width: 148px;
+
+    right: -4px;
+
+    top: 18px;
+
+    z-index: 2;
+
     transform: none;
   }
 }
 
-/* SMALL MOBILE */
+
+/* =================================================
+   SMALL MOBILE
+================================================= */
 
 @media (max-width: 420px) {
+
+  /* =========================
+     SECTION
+  ========================= */
+
   .getapp-section {
-    margin: -10px auto 0;
-    padding: 0 15px;
+    margin: 48px auto 0;
+
+    padding: 0 12px;
   }
+
+
+  /* =========================
+     DARK BOX
+  ========================= */
 
   .getapp-box {
-    min-height: 650px;
-    padding: 35px 20px 0;
+    min-height: 305px;
+
+    padding: 28px 14px;
+
+    gap: 24px;
+
+    border-radius: 24px;
   }
+
+
+  /* =========================
+     LEFT CONTENT
+  ========================= */
+
+  .getapp-content {
+    width: 50%;
+
+    flex-shrink: 0;
+  }
+
+
+  /* =========================
+     HEADING
+  ========================= */
 
   .getapp-content h2 {
-    font-size: 32px;
+    font-size: 25px;
+
+    line-height: 1.05;
   }
+
+
+  /* =========================
+     DESCRIPTION
+  ========================= */
 
   .getapp-content p {
-    font-size: 12px;
+    margin: 11px 0 15px;
+
+    font-size: 8.5px;
+
+    line-height: 1.45;
+
+    max-width: 145px;
   }
+
+
+  /* =========================
+     BUTTONS
+  ========================= */
+
+  .getapp-buttons {
+    gap: 7px;
+  }
+
 
   .download-btn {
-    min-width: 125px;
-    height: 44px;
-    font-size: 11px;
+    width: 105px;
+
+    min-width: 105px;
+
+    height: 36px;
+
+    padding: 0 8px;
+
+    font-size: 8px;
+
+    gap: 5px;
   }
+
+
+  .download-btn svg {
+    width: 12px;
+
+    height: 12px;
+  }
+
+
+  /* =========================
+     RIGHT PHONE AREA
+  ========================= */
 
   .getapp-phones {
-    height: 340px;
+    width: 42%;
+
+    height: 100%;
+
+    right: 0;
+
+    top: 0;
   }
+
+
+  /* =========================
+     BACK PHONE
+  ========================= */
 
   .back-phone {
-    width: 200px;
-    right: 35%;
-    top: 75px;
+    width: 118px;
+
+    right: 19px;
+
+    top: 58px;
+
+    z-index: 1;
+
+    opacity: 0.9;
   }
+
+
+  /* =========================
+     FRONT PHONE
+  ========================= */
 
   .front-phone {
-    width: 200px;
-    right: -5%;
-    top: 20px;
+    width: 132px;
+
+    right: -6px;
+
+    top: 15px;
+
+    z-index: 2;
   }
 }
-

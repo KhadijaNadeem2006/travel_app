@@ -23,6 +23,7 @@ const Footer = () => {
         {/* LEARN MORE */}
         <div className="footer-column">
           <h3>Learn More</h3>
+
           <Link href="/">About Hilink</Link>
           <Link href="/">Press Releases</Link>
           <Link href="/">Environment</Link>
@@ -31,26 +32,27 @@ const Footer = () => {
           <Link href="/">Contact Us</Link>
         </div>
 
-        {/* COMMUNITY */}
+        {/* OUR COMMUNITY */}
         <div className="footer-column">
           <h3>Our Community</h3>
+
           <Link href="/">Climbing xixixi</Link>
           <Link href="/">Hilink hiking</Link>
           <Link href="/">Hilink kinling</Link>
         </div>
 
-        {/* CONTACT */}
+        {/* CONTACT US */}
         <div className="footer-column footer-contact">
           <h3>Contact Us</h3>
 
           <p>
             <span>Admin Officer:</span>
-            123-456-7890
+            <span>123-456-7890</span>
           </p>
 
           <p>
             <span>Email Officer:</span>
-            hilink@akinthil.com
+            <span>hilink@akinthil.com</span>
           </p>
         </div>
 
@@ -59,11 +61,47 @@ const Footer = () => {
           <h3>Social</h3>
 
           <div className="footer-social-icons">
-            <a href="https://facebook.com" target="_blank" rel="noreferrer">f</a>
-            <a href="https://instagram.com" target="_blank" rel="noreferrer">◎</a>
-            <a href="https://twitter.com" target="_blank" rel="noreferrer">♥</a>
-            <a href="https://youtube.com" target="_blank" rel="noreferrer">▶</a>
-            <a href="https://wordpress.com" target="_blank" rel="noreferrer">W</a>
+
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              f
+            </a>
+
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              ◎
+            </a>
+
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              ♥
+            </a>
+
+            <a
+              href="https://youtube.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              ▶
+            </a>
+
+            <a
+              href="https://wordpress.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              W
+            </a>
+
           </div>
         </div>
 
